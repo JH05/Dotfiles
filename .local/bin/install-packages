@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Install required packages.
+# Depedencies: sudo, pacman, yay
+
+PKG=(
+    awesome
+    xorg-xinit 
+    mpv
+)
+
+AUR=(
+    alacritty-themes 
+    spotify
+    spicetify-cli-git
+    spotify-adblock-git
+    vscodium-bin
+    bitwarden-bin
+
+    # fonts
+    ttf-ms-fonts
+    nerd-fonts-fira-code
+    steam-fonts
+    ttf-google-fonts-git
+    ttf-mac-fonts
+)
+
+if [[ "$BASH_SOURCE" == "$0"  ]]; then
+    set -o errexit
+    sudo pacman -S --needed "${PKG[@]}"
+    yay -S --aur --needed --removemake "${AUR[@]}"
+fi

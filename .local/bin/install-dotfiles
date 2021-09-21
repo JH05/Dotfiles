@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Install dotfiles as a bar git repository and override configuration files in '$HOME'.
+# Dependencies: git
+
+set -o errexit
+export GIT_WORK_TREE=$HOME
+export GIT_DIR=$GIT_WORK_TREE/.dotfiles
+
+git clone --bare https://github.com/JH05/Dotfiles.git "$GIT_DIR"
+
+function config {
+	/usr/bin/git --git-dir="$GIT_DIR"/ --work-tree="$GIT_WORK_TREE" $@
+}
+
+mkdir -p .config-backup
+
+config checkout --force
+
+if [ $? = 0 ]; then
+	echo "Checked out config.";
+else
+	echo "Backing up pre-existing dotfiles.";
+	config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
+fi;
+
+config checkout --force
+
+config config status.showUntrackedFiles no
