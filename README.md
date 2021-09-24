@@ -2,6 +2,7 @@
 
 ## Dependencies
 You will need to install the following dependencies:
+
 `git`
 
 `curl`
