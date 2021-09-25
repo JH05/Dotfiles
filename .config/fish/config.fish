@@ -1,5 +1,5 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+		# Commands to run in interactive sessions can go here
 end
 
 # First line removes the path; second line sets it.  Without the first line,
@@ -13,11 +13,11 @@ set TERM "xterm-256color" # Sets the terminal type
 
 ### SET MANPAGER
 ### "vim" as manpager
-# set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
+set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 ### SET DEFAULT VI MODE ###
 function fish_user_key_bindings
-  fish_vi_key_bindings
+	fish_vi_key_bindings
 end
 ### END OF VI MODE ###
 

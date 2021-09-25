@@ -29,11 +29,11 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
 	if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have colour support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429).
-	color_prompt=yes
+		# We have colour support; assume it's compliant with Ecma-48
+		# (ISO/IEC-6429).
+		color_prompt=yes
 	else
-	color_prompt=
+		color_prompt=
 	fi
 fi
 
@@ -68,7 +68,7 @@ fi
 case ${TERM} in
   xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|konsole*)
 	PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-		;;
+	;;
   screen*)
 	PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
 	;;
@@ -92,7 +92,7 @@ ex ()
 {
   if [ -f $1 ] ; then
 	case $1 in
-	  *.tar.bz2)   tar xjf $1   ;;
+		*.tar.bz2)   tar xjf $1   ;;
 	  *.tar.gz)    tar xzf $1   ;;
 	  *.bz2)       bunzip2 $1   ;;
 	  *.rar)       unrar x $1   ;;
