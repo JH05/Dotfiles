@@ -1,3 +1,7 @@
+#
+# ~/.zshrc
+#
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -109,3 +113,6 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# Show hidden files and folders on macOS.
+# Keyboard shortcut: 'cmd' + 'shift' + '.'
+alias hidden="chflags hidden"
