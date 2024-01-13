@@ -26,12 +26,12 @@ echo ".dotfiles" >> .gitignore
 Now clone my dotfiles into your $HOME by running:
 
 ```
-curl -Lks https://github.com/JH05/Dotfiles/raw/master/.local/bin/install-dotfiles | /bin/bash
+curl -Lks https://github.com/zyqilla/Dotfiles/raw/master/.local/bin/install-dotfiles | /bin/bash
 ```
 
 You can install required packages, however that it is specific to Arch Linux.
 
 ```
-curl -Lks https://github.com/JH05/Dotfiles/raw/master/.local/bin/install-packages | /bin/bash 
+curl -Lks https://github.com/zyqilla/Dotfiles/raw/master/.local/bin/install-packages | /bin/bash 
 sudo pacman -S "${PKG[@]}" && yay -Sa "${AUR[@]}" --user
 ```
