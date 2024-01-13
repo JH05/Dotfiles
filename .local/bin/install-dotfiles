@@ -7,7 +7,7 @@ set -o errexit
 export GIT_WORK_TREE=$HOME
 export GIT_DIR=$GIT_WORK_TREE/.dotfiles
 
-git clone --bare https://github.com/JH05/Dotfiles.git "$GIT_DIR"
+git clone --bare https://github.com/zyqilla/Dotfiles.git "$GIT_DIR"
 
 function config {
 	/usr/bin/git --git-dir="$GIT_DIR"/ --work-tree="$GIT_WORK_TREE" $@
