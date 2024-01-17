@@ -3,26 +3,28 @@
 # Install required packages.
 # Depedencies: sudo, pacman, yay
 
-PKG=(
-    awesome
-    xorg-xinit 
-    mpv
+# pacman packages
+PKG=( 
+    mpv                         # a free, open source, and cross-platform media player.
+    steam                       # Valve's digital software delivery system.
+    discord                     # All-in-one voice and text chat for gamers.
+    thunderbird                 # Standalone mail and news reader from mozilla.
+    code                        # The Open Source build of Visual Studio Code (vscode) editor.
+    bitwarden                   # A secure and free password manager for all of your devices.
 )
 
-AUR=(
-    alacritty-themes 
-    spotify
-    spicetify-cli-git
-    spotify-adblock-git
-    vscodium-bin
-    bitwarden-bin
+# Arch User Repository packages
+AUR=( 
+    spotify                     # A proprietary music streaming service.
+    spicetify-cli-git           # Command-line tool to customize Spotify client.
+    spicetify-marketplace-bin   # Spicetify app that integrates a marketplace for extensions, themes and snippets.
+    megasync                    # Official MEGA desktop application for syncing with MEGA Cloud Drive.
+    github-desktop              # GUI for managing Git and GitHub.
 
     # fonts
-    ttf-ms-fonts
-    nerd-fonts-fira-code
-    steam-fonts
-    ttf-google-fonts-git
-    ttf-mac-fonts
+    ttf-ms-fonts                # Core TTF Fonts from Microsoft.
+    ttf-google-fonts-git        # TrueType fonts from the Google Fonts project (git version).
+    ttf-mac-fonts               # Mac fonts including Lucida Grande, Apple Garamond and other fonts from Apple.
 )
 
 if [[ "$BASH_SOURCE" == "$0"  ]]; then

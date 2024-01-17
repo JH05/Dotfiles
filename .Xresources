@@ -1,7 +1,0 @@
-# This will make the font render properly in most toolkits and applications. 
-# It will however not affect things such as icon size.
-# For Xft.dpi, using integer multiples of 96 usually works best, e.g. 192 for 200% scaling. 
-Xft.dpi: 192 
-
-# Other variables:
-Xft.antialias: 1
